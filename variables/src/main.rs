@@ -15,5 +15,20 @@ fn main() {
     }
 
 
+    let tup =  (254, 9.1,  6);
+
+    let (x, _y, _z )=  tup;
+
+    let mut f =  tup.1;
+
+    println!("f: {f}");
+
+    f =  88.9;
+
+
+    println!("f: {f}");
+
     println!("the value of x:  {x}");
+
+
 }
