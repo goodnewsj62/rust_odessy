@@ -21,6 +21,10 @@ fn main() {
 
     println!("mode {}",  get_mode(&vec_of_num));
 
+    
+
+    println!("{}",  transform_string("apple"))
+
 }
 
 fn sort_vector_number(list_of_num:  &mut Vec<i32>){
@@ -81,4 +85,22 @@ fn get_mode(vector:  &Vec<i32>) -> i32{
     }
 
     max.0
+}
+
+
+fn transform_string(string:  &str) -> String{
+    let first_slice =  string.chars().next();
+    let vowels =  ['a', 'e','i','o','u'];
+
+    if let Some(value) =  first_slice {
+        if !vowels.contains(&value){
+            let sep =  "-";
+            sep.to_string().push(value);
+            return string[1..].to_string() + &sep + &"ay";
+        }else{
+            return string.to_string() + &"-hay" ;
+        }
+    }
+
+    string.to_string()
 }
