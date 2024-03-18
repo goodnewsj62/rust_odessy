@@ -28,3 +28,16 @@ fn longest<'a>(x:&'a str,  y:&'a str) -> &'a str {
 
     y
 }
+
+
+trait  X {
+    fn some_kind (item:&str) -> String;
+}
+
+struct ImplPart<'a, T>{
+    x:&'a T
+}
+
+impl<'a,T>  ImplPart<'a, T> {
+    
+}
